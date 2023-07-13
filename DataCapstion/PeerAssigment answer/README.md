@@ -3,4 +3,3 @@
 
 > 1. Report: https://github.com/princekumarg/DataScience_Prepration/blob/master/DataCapstion/PeerAssigment%20answer/Final%20Report%20%20-%20Capstone%20Project%20%E2%80%93%20The%20Battle%20of%20Neighborhoods%20%20Finding%20a%20Better%20Place%20in%20Scarborough%2C%20Toronto.ipynb
 > 2. Notebook: https://github.com/princekumarg/DataScience_Prepration/blob/master/DataCapstion/PeerAssigment%20answer/Final%20Report%20%20-%20Capstone%20Project%20%E2%80%93%20The%20Battle%20of%20Neighborhoods%20%20Finding%20a%20Better%20Place%20in%20Scarborough%2C%20Toronto.ipynb
-> 3. Blogpost: http://bit.ly/2Sm4ALm
