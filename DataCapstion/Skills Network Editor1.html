@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="keywords" content="Editor.md,editor,Markdown Editor,Markdown" />
+    <meta name="description" content="Skills Network Author IDE" />
+    <title>Skills Network Editor</title>
+    <link rel="stylesheet" href="/editormd/examples/css/style.css?version=3.0.2" />
+    <link rel="stylesheet" href="/editormd/css/editormd.css?version=3.0.2" />
+    <link rel="stylesheet" href="/public/css/custom.css?version=3.0.2" />
+    <link rel="stylesheet" href="/public/css/custom_popover.css?version=3.0.2" />
+    <link rel="shortcut icon" href="/public/images/SN_favicon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="/public/js/comms.js?version=3.0.2"></script>
+    <script src="//unpkg.com/alpinejs"></script>
+</head>
+
+<body>
+    <div id="layout">
+    <div id="test-editormd">
+        <textarea style="display:none;">&lt;img src&#x3D;&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module3/images/SN_web_lightmode.png&quot;&gt;
+
+::page{title&#x3D;&quot;Linking GitHub to Watson Studio&quot;}
+
+Estimated time needed: **30** minutes
+
+### Pre-requisite : 
+
+* IBM Cloud Account 
+* GitHub Account
+* Watson Studio Service &amp; Project creation
+
+&gt; NOTE: IF you don&#x27;t have a IBM Cloud account follow the steps given in &lt;a href&#x3D;&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-CC0100EN-SkillsNetwork/labs/IBMCloud_accountCreation/CreateIBMCloudAccount.md.html&quot;&gt;link&lt;/a&gt;. 
+
+&gt; To create Watson service, follow the steps given in the &lt;a href&#x3D;&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0101EN-SkillsNetwork/labs/Module%202/IBM_Cloud_Account_Setup.md.html&quot;&gt;link&lt;/a&gt;
+
+&gt; To create GitHub Account, follow the steps given in the &lt;a href&#x3D;&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module2/GitHub1_Getting_Started.md.html&quot;&gt;link&lt;/a&gt;.
+
+## Objectives
+
+After completing this lab you will be able to:
+
+*   Understand how to connect Watson Studio account with GitHub
+*   Publish Watson Notebook on GitHub.
+
+## Exercise
+
+In this exercise through different tasks, you will learn how to connect Watson Studio with GitHub and publish the notebook through Watson Studio
+
+### Task A: Integrating Watson Studio with GitHub
+
+1. Login to IBM Cloud account: https://cloud.ibm.com/login
+
+2. Open **Resource List** using https://cloud.ibm.com/resources
+
+3. Under **AI / Machine Learning**. Click **Watson Studio**.
+
+![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module3/images/Click_Watson.png)
+
+3. You will be redirected to Watson studio. Click **Launch in IBM Cloud Pak for Data**.
+
+![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module3/images/launch.png)
+
+4. Click on the project you have created already. _(If you have not created any project, follow the Watson Studio and project creation from pre-requisites.)_
+
+5. Once you open the project, the page looks like as:
+
+![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module3/images/project.png)
+
+6. Click on **Manage** tab. Select **Service &amp;nbps; integrations** and click **Third-Party integrations**.
+ 
+
+![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module3/images/third_party1.png)
+
+7. Click on **Connect integration**
+
+![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module3/images/integration.png)
+
+8. Select **GitHub** and click **Next**.
+
+![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module3/images/next.png)
+
+9. Then generate Access Token and add it in **Personal access Token**. Once the Access token is added, enter the repository name where you want to push the notebook. Then click on **connect** button.
+
+&lt;details&gt;
+
+&lt;summary&gt;Click here for Generating Access token
+
+&lt;/summary&gt;
+
+- Follow the steps for [Generation of Access Token](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module3/Access_token.md.html)
+
+&lt;/details&gt;
+
+&lt;/br&gt;
+
+10. Once the repository is added successfully, you get a successfully connected message as shown in the screenshot below:
+
+![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module3/images/success.png)
+
+&lt;/br&gt;
+
+### Task B: Publish Watson Notebook on GitHub
+
+1. Select the notebook you wish to push on to the GitHub, select the up-arrow and click on **Publish on GitHub**.
+
+![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module3/images/push.png)
+
+A success message will be poped indicating the name of the repository with the notebook name.ipynb.
+
+![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module3/images/success_1.png)
+
+2. You can see the notebook test.ipnb which you have published from Watson Studio.
+
+![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module3/images/github.png)
+
+&lt;details&gt;
+
+&lt;summary&gt;&lt;strong&gt;Important notes&lt;/strong&gt;
+
+&lt;/summary&gt;
+
+&gt; Please ensure that you have a **master branch** created on GitHub before publishing your notebook.
+
+(This is necessary because when you connect a repository to a project in Watson Studio and try to publish a notebook to GitHub, it automatically pushes your notebook to the **master branch** else it gives an error as shown in the screenshot below)
+
+![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module3/images/maste_not_found.png)
+
+If you get an error, then just click on the drop down icon in the main and type **master** and press enter.
+
+![image](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module3/images/master.png)
+
+&lt;/details&gt;
+
+&lt;/br&gt;
+
+## Author
+
+[Niveditha Pandith](https://www.linkedin.com/in/niveditha-pandith-53a057231/?utm_medium&#x3D;Exinfluencer&amp;utm_source&#x3D;Exinfluencer&amp;utm_content&#x3D;000026UJ&amp;utm_term&#x3D;10006555&amp;utm_id&#x3D;NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkDS0105ENSkillsNetwork984-2022-01-01)
+
+### Other Contributor(s)
+
+&lt;h4&gt;&lt;a href &#x3D; &quot;https://www.linkedin.com/in/malika-goyal-04798622/?utm_medium&#x3D;Exinfluencer&amp;utm_source&#x3D;Exinfluencer&amp;utm_content&#x3D;000026UJ&amp;utm_term&#x3D;10006555&amp;utm_id&#x3D;NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkDS0105ENSkillsNetwork984-2022-01-01&quot;&gt;Malika Singla&lt;/a&gt; &lt;h4/&gt;
+
+&lt;/br&gt;
+
+## Change Log
+
+| Date (YYYY-MM-DD) | Version | Changed By        | Change Description                        |
+| ----------------- | ------- | ----------------- | ----------------------------------------- |
+|  2022-05-05       |    0.1  | Niveditha         | Created Initial Version |
+|  2023-02-07       |    0.2  | Anita Verma         |Updated instructions &amp; screenshots |
+
+&lt;hr&gt;
+
+## &lt;h3 align&#x3D;&quot;center&quot;&gt; © IBM Corporation 2022. All rights reserved. &lt;h3/&gt;
+
+</textarea>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/he@1.2.0/he.min.js"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.6/iframeResizer.contentWindow.min.js"></script>
+
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+<link rel="stylesheet" href="public/css/custom_plyr.css?version=3.0.2" />
+
+<script src="editormd/examples/js/jquery.min.js"></script>
+<script src="editormd/editormd.js?version=3.0.2"></script>
+
+<script src="editormd/languages/en.js"></script>
+
+<script src="public/js/common.js?version=3.0.2"></script>
+<script src="public/js/render.js?version=3.0.2"></script>
+
+<script type="text/javascript">
+
+
+    var authorEditor = $(function () {
+        let metadata = he.decode('{&quot;markdown-version&quot;:&quot;v1&quot;,&quot;tool-type&quot;:&quot;theia&quot;,&quot;branch&quot;:&quot;lab-4444-instruction&quot;,&quot;version-history-start-date&quot;:&quot;2023-01-27T23:41:08Z&quot;}')
+        injectMetadata(metadata)
+
+        let token = findGetParameter("token");
+
+        let LABS_BASE_URL = 'https://labs.cognitiveclass.ai';
+        let asset_library_prefix_url = 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork';
+        let tool_type = "theia";
+        let filename = `labs/Module3/PublishWatson_GitHub.md`;
+        let audio = JSON.parse(`{"url":"","isValid":false,"isOutdated":false}`)
+
+        return authorEditor = editormd("test-editormd", "3.0.2", {
+
+            tool_type,
+            filename,
+            audio,
+
+            width: "100%",
+            //height: "100%",
+            autoHeight: true,
+
+            // mode: 'markdown',
+
+            theme: "dark",
+            previewTheme: tool_type == "instructional-lab" ? "light" : "dark",
+            editorTheme: "pastel-on-dark",
+
+            readOnly: true,
+
+            pluginPath: 'plugins/',
+
+
+            syncScrolling: false,
+
+            htmlDecode: 'img',
+
+            path: 'editormd/lib/',
+            watch: false,
+
+            // markdown,
+            toolbar: false,
+
+            atLink: false,
+            toc: true,
+            tocm: true,
+            tocDropdown: false,
+            tocTitle: "Table of Contents For your lab!",
+
+            tex: true,
+            flowChart: true,
+            sequenceDiagram: true,
+            codeFold: true, // Doesn't do anything?
+            taskList: true,
+            emoji: true,
+
+            saveMarkdownToTextarea: true,
+
+            onresize: function () {
+                $("html,body").css("overflow", "hidden");
+
+                this.preview.css({
+                    width: $(window).width(),
+                    height: $(window).height()
+                })
+
+                adjustProgressBarWidth()
+            },
+            fixCodeBlocks: function () {
+                adjustCodeBlocks(this);
+            },
+            onload: function () {
+                $("[type=\"file\"]").bind("change", function () {
+                    alert($(this).val());
+                    authorEditor.cm.replaceSelection($(this).val());
+                    console.log($(this).val(), authorEditor);
+                });
+
+                this.fullscreen();
+                this.previewing();
+
+                setPreviewWatchToolbar(this);
+
+                if (tool_type != "instructional-lab") {
+                    fixCustomPlugins(this);
+                }
+                else {
+                    addAudioWidget(this, audio);
+                }
+
+                setAssetLibraryPrefixUrl(asset_library_prefix_url);
+                //comms with UI
+                setParentUrl(LABS_BASE_URL);
+                establishCommsWithUI(this);
+                //let the UI know that the author-ide has loaded
+                requestToUI({ type: "frame_loaded" });
+            }
+        });
+    });
+</script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+
+</html>
